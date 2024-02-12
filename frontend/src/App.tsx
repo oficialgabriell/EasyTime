@@ -1,15 +1,18 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import MainApp from './components/Main';
-import CadFuncionario from './components/CadFuncionario';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-       <CadFuncionario/>
-      </header>
-    </div>
+    <React.Fragment>
+      <Router>
+        <Routes>
+          <Route element={<MainApp />} path="/" />
+        </Routes>
+      </Router>
+    </React.Fragment>
   );
 }
 
