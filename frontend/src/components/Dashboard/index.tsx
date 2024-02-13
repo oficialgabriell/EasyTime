@@ -1,8 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
-import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
-import './style.css'; // Importe o arquivo CSS para este componente
+import './style.css'; 
 
 
 function VerticalExample() {
