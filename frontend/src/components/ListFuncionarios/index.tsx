@@ -1,46 +1,42 @@
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
+import Table from 'react-bootstrap/Table';
 
-function ListFuncionarios(props: any) {
+function DarkExample() {
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
-      <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Lista de Funcionários
-        </Modal.Title>
-      </Modal.Header>
-      <Modal.Body className="grid-example">
-        <Container>
-          <Row>
-            <Col xs={12} md={8}>
-              Funcionário 1
-            </Col>
-            <Col xs={12} md={8}>
-              Funcionário 2
-            </Col>
-          </Row>
-
-          <Row>
-            <Col xs={12} md={8}>
-              Fincionário 3
-            </Col>
-            <Col xs={12} md={8}>
-              Funcionário 4
-            </Col>
-            <Col xs={12} md={8}>
-              Funcionário 5
-            </Col>
-          </Row>
-        </Container>
-      </Modal.Body>
-      <Modal.Footer>
-        <Button onClick={props.onHide}>Sair</Button>
-        <Button onClick={props.onClick}>Baixar lista</Button>
-      </Modal.Footer>
-    </Modal>
+    <Table striped bordered hover variant="dark">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Cargo</th>
+          <th>Matrícula</th>
+          <th>Setor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Gabriel</td>
+          <td>Técnico</td>
+          <td>123456</td>
+          <td>Manutenção</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Igor</td>
+          <td>Garoto de programa</td>
+          <td>242424</td>
+          <td>Dev</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Airton</td>
+          <td>Supervisor</td>
+          <td>123456</td>
+          <td>Monitoramento</td>
+        </tr>
+      </tbody>
+    </Table>
   );
-  }
-export default ListFuncionarios;
+}
+
+export default DarkExample;

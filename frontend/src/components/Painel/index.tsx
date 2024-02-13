@@ -1,56 +1,48 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
-
-function PainelLogin() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+import React, { useState } from 'react';
+import { Button, Form, Container, Card } from 'react-bootstrap';
+import './style.scss';
+const PainelLogin: React.FC = () => {
+  const [matricula, setMatricula] = useState('');
+  const [password, setPassword] = useState('');
 
   return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Login
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Painel de Login</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+    <div className=' bg-Custom' style={{paddingTop: '8.75rem'}}>
+    <Container className="mt-5 d-flex align-items-center">
+      <Card className='bg-transparent'>
+        <Card.Header className='text-center customColor grayBackground'>
+          <h2>Login</h2>
+        </Card.Header>
+        <Card.Body>
           <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group className="" controlId="formBasicMatricula">
               <Form.Label>Matrícula</Form.Label>
               <Form.Control
-                type="number"
-                placeholder="123456789"
-                autoFocus
+                type="text"
+                placeholder="@123456"
+                value={matricula}
+                onChange={(e) => setMatricula(e.target.value)}
               />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+            <Form.Group controlId="formBasicPassword">
               <Form.Label>Senha</Form.Label>
               <Form.Control
-                type="text"
-                placeholder="123456789"
-                autoFocus
+                type="password"
+                placeholder="Digite sua senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Form.Group>
+
+            <Button className=""variant="primary" type="button">
+              Entrar
+            </Button>
           </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Sair
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Entrar
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+        </Card.Body>
+      </Card>
+    </Container>
+    </div>
   );
-}
+};
 
 export default PainelLogin;
