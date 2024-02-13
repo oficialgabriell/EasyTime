@@ -1,0 +1,14 @@
+.vertical-container {
+  height: 100vh; /* Defina a altura como 100% da viewport */
+  display: flex; /* Use flexbox para alinhar os itens */
+  justify-content: center; /* Centralize o ButtonGroup horizontalmente */
+  align-items: center; /* Centralize o ButtonGroup verticalmente */
+}
+
+.button-group-container {
+  width: 100%; /* Faça com que o ButtonGroup ocupe toda a largura da div pai */
+}
+
+.full-height {
+  height: 100%; /* Defina a altura do ButtonGroup como 100% da div pai */
+}
