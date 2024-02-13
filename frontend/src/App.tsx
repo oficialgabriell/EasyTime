@@ -10,7 +10,7 @@ function App(): JSX.Element {
     <React.Fragment>
       <Router>
         <Routes>
-          <Route element={<PainelLogin />} path="/" />
+          <Route element={<PainelLogin />} path="/login" />
         </Routes>
       </Router>
     </React.Fragment>
