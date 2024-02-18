@@ -23,18 +23,6 @@ const PainelLogin: React.FC = () => {
   return (
     <div className='bg-Custom'>
       <Container className="mt-5 d-flex align-items-center w-100" style={{ width: '60rem' }}>
-        <img
-          src="https://i.imgur.com/TrLvVCq.jpg"  // Substitua pela URL direta da imagem
-          alt="Logo"
-          width="600"
-          height="600"
-          style={{
-            float: 'right',
-            marginRight: '0',
-            marginLeft: 'auto', // Aspas simples corretamente fechadas aqui
-            marginTop: '-3.75rem'
-          }}
-        />
         <Card className='bg-transparent border-0 mx-2 w-20rem'>
           <Card.Header className='text-center customColor grayBackground rounded'>
             <h2>Login</h2>
@@ -68,6 +56,18 @@ const PainelLogin: React.FC = () => {
             </Form>
           </Card.Body>
         </Card>
+        <img
+          src="https://i.imgur.com/TrLvVCq.jpg"  // Substitua pela URL direta da imagem
+          alt="Logo"
+          width="600"
+          height="600"
+          style={{
+            float: 'right',
+            marginRight: '0',
+            marginLeft: 'auto', // Aspas simples corretamente fechadas aqui
+            marginTop: '-3.75rem'
+          }}
+        />
       </Container>
     </div>
 

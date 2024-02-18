@@ -1,0 +1,19 @@
+$cor-azul-escuro: #001c38;
+$cor-iluminacao: #0071bd; // Azul mais claro para a iluminação
+
+// Configuração da imagem
+$largura: 1920px;
+$altura: 1080px;
+
+.bg-Custom {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, $cor-azul-escuro, $cor-iluminacao $altura);
+}
+
+.colorLabel {
+    color: aliceblue;
+}
