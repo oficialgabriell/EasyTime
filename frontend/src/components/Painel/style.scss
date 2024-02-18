@@ -6,16 +6,22 @@
     background-color: #00072c; 
   }
 
+// Definindo variáveis de cores
+$cor-azul-escuro: #001c38;
+$cor-iluminacao: #0071bd; // Azul mais claro para a iluminação
+
+// Configuração da imagem
+$largura: 1920px;
+$altura: 1080px;
+
+// Criando o gradiente
 .bg-Custom {
-    background-image: url(../image/BackgroundLogin.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin: 0; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, $cor-azul-escuro, $cor-iluminacao $altura);
 }
 
 .w-20rem {
