@@ -142,14 +142,14 @@ const CadFuncionario: React.FC = () => {
               </Row>
 
               <Row>
-                <Col md={6} className="mb-3">
+                <Col md={2} className="mb-3">
                   <Button className="d-block mx-auto mt-2" variant="primary" type="submit">
                     Cadastrar
                   </Button>
                 </Col>
-                <Col md={6} className="mb-3">
-                  <Button className="d-block mx-auto mt-2 colorLabel" variant="secondary" type="button">
-                    Cancelar
+                <Col md={2} className="mb-3">
+                  <Button className="d-block mx-auto mt-2" href="/Dashboard"variant="secondary" type="button">
+                    Voltar
                   </Button>
                 </Col>
               </Row>
