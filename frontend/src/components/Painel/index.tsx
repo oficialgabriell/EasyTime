@@ -57,14 +57,14 @@ const PainelLogin: React.FC = () => {
           </Card.Body>
         </Card>
         <img
-          src="https://i.imgur.com/TrLvVCq.jpg"  // Substitua pela URL direta da imagem
+          src="https://i.imgur.com/TrLvVCq.jpg"
           alt="Logo"
           width="600"
           height="600"
           style={{
             float: 'right',
             marginRight: '0',
-            marginLeft: 'auto', // Aspas simples corretamente fechadas aqui
+            marginLeft: 'auto',
             marginTop: '-3.75rem'
           }}
         />

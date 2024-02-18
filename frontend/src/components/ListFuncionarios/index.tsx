@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import Table from 'react-bootstrap/Table';
 import './style.scss';
-import {Nav, NavDropdown, Navbar } from 'react-bootstrap';
-
 interface Funcionario {
   id: number;
   nome: string;
