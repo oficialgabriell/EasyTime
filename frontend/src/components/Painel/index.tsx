@@ -6,26 +6,23 @@ const PainelLogin: React.FC = () => {
   const [password, setPassword] = useState('');
 
   useEffect(() => {
-    // Função para bloquear o zoom com o scroll do mouse
     const handleWheel = (e: WheelEvent) => {
       if (e.ctrlKey || e.metaKey) {
         e.preventDefault();
       }
     };
-
-    // Adiciona o listener do evento de rolagem do mouse
+    
     window.addEventListener('wheel', handleWheel, { passive: false });
 
-    // Remove o listener quando o componente for desmontado
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
-  }, []); // O array vazio [] assegura que o useEffect será executado apenas uma vez durante a montagem do componente
+  }, []);
 
 
   return (
     <div className='bg-Custom' style={{ paddingTop: '2rem', display: 'flex'}}>
-    <Container className="mt-5 d-flex align-items-center" style={{ width: '70%', height: '70%' }}>
+    <Container className="mt-5 d-flex align-items-center" style={{ width: '60rem'}}>
       <Card className='bg-transparent'>
         <Card.Header className='text-center customColor grayBackground rounded'>
           <h2>Login</h2>
@@ -60,6 +57,7 @@ const PainelLogin: React.FC = () => {
       </Card>
     </Container>
     </div>
+
   );
 };
 
