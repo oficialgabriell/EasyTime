@@ -34,7 +34,7 @@ function CadFuncionario() {
               <Form.Label>Data de Nascimento</Form.Label>
               <Form.Control
                 type="date"
-                placeholder="name@example.com"
+                placeholder="26/03/2002"
                 autoFocus
               />
             </Form.Group>
@@ -43,7 +43,7 @@ function CadFuncionario() {
               <Form.Label>Endereço</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="name@example.com"
+                placeholder="Rua 10, Lagoa Nova, Ocara CEP:627555-000"
                 autoFocus
               />
             </Form.Group>
@@ -52,7 +52,7 @@ function CadFuncionario() {
               <Form.Label>Nome do Pai</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="name@example.com"
+                placeholder="Nome completo"
                 autoFocus
               />
             </Form.Group>
@@ -61,7 +61,7 @@ function CadFuncionario() {
               <Form.Label>Nome da Mãe</Form.Label>
               <Form.Control
                 type="text"
-                placeholder="name@example.com"
+                placeholder="Nome completo"
                 autoFocus
               />
             </Form.Group>
@@ -70,7 +70,7 @@ function CadFuncionario() {
               <Form.Label>Matrícula</Form.Label>
               <Form.Control
                 type="number"
-                placeholder="name@example.com"
+                placeholder="123456789"
                 autoFocus
               />
             </Form.Group>

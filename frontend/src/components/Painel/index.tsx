@@ -1,56 +1,64 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import Modal from 'react-bootstrap/Modal';
+import React, { useState, useEffect } from 'react';
+import { Button, Form, Container, Card } from 'react-bootstrap';
+import './style.scss';
+const PainelLogin: React.FC = () => {
+  const [matricula, setMatricula] = useState('');
+  const [password, setPassword] = useState('');
 
-function PainelLogin() {
-  const [show, setShow] = useState(false);
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+      }
+    };
+    
+    window.addEventListener('wheel', handleWheel, { passive: false });
 
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
+
 
   return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Login
-      </Button>
-
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Painel de Login</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
+    <div className='bg-Custom' style={{ paddingTop: '2rem', display: 'flex'}}>
+    <Container className="mt-5 d-flex align-items-center" style={{ width: '60rem'}}>
+      <Card className='bg-transparent'>
+        <Card.Header className='text-center customColor grayBackground rounded'>
+          <h2>Login</h2>
+        </Card.Header>
+        <Card.Body>
           <Form>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Matrícula</Form.Label>
-              <Form.Control
-                type="number"
-                placeholder="123456789"
-                autoFocus
-              />
-            </Form.Group>
-
-            <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-              <Form.Label>Senha</Form.Label>
+            <Form.Group className="" controlId="formBasicMatricula">
+              <Form.Label></Form.Label>
               <Form.Control
                 type="text"
-                placeholder="123456789"
-                autoFocus
+                placeholder="Matrícula"
+                value={matricula}
+                onChange={(e) => setMatricula(e.target.value)}
               />
             </Form.Group>
+
+            <Form.Group controlId="formBasicPassword">
+              <Form.Label></Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Senha"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </Form.Group>
+
+            <Button className="d-block mx-auto mt-3"variant="primary" type="button">
+              Entrar
+            </Button>
           </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Sair
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Entrar
-          </Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+        </Card.Body>
+      </Card>
+    </Container>
+    </div>
+
   );
-}
+};
 
 export default PainelLogin;

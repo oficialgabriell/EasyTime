@@ -1,0 +1,19 @@
+.customColor {
+    color:aqua;
+}
+
+.grayBackground {
+    background-color: #00072c; /* Substitua pela cor desejada */
+  }
+
+.bg-Custom {
+    background-image: url(../image/BackgroundLogin.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Define a altura para ocupar 100% da altura da viewport */
+    margin: 0; /* Remove margens padrão para o body */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

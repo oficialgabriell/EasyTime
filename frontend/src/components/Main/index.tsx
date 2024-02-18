@@ -1,6 +1,3 @@
-import CadFuncionario from "../CadFuncionario";
-import ListFuncionarios from "../ListFuncionarios";
-import PainelLogin from "../Painel";
 
 function MainApp() {
     return (
