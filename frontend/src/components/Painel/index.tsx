@@ -22,8 +22,8 @@ const PainelLogin: React.FC = () => {
 
   return (
     <div className='bg-Custom' style={{ paddingTop: '2rem', display: 'flex'}}>
-    <Container className="mt-5 d-flex align-items-center" style={{ width: '60rem'}}>
-      <Card className='bg-transparent'>
+    <Container className="mt-5 d-flex align-items-center w-100" style={{ width: '60rem'}}>
+      <Card className='bg-transparent border-0 mx-2 w-20rem'>
         <Card.Header className='text-center customColor grayBackground rounded'>
           <h2>Login</h2>
         </Card.Header>
@@ -36,6 +36,7 @@ const PainelLogin: React.FC = () => {
                 placeholder="Matrícula"
                 value={matricula}
                 onChange={(e) => setMatricula(e.target.value)}
+                className='my-2'
               />
             </Form.Group>
 
@@ -49,7 +50,7 @@ const PainelLogin: React.FC = () => {
               />
             </Form.Group>
 
-            <Button className="d-block mx-auto mt-3"variant="primary" type="button">
+            <Button className="d-block mx-auto mt-5"variant="primary" type="button">
               Entrar
             </Button>
           </Form>
